@@ -227,7 +227,7 @@ export const EmeraldHero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="text-xl sm:text-2xl text-green-200/90 mb-12 max-w-3xl mx-auto font-light tracking-wide"
+            className="text-sm sm:text-2xl text-green-200/90 mb-12 max-w-3xl mx-auto font-light tracking-wide"
           >
             <span className="bg-green-900/40 px-2 py-1 rounded">
               Poultry Excellence
