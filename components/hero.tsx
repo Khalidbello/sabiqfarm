@@ -251,7 +251,7 @@ export const EmeraldHero = () => {
                 boxShadow: "0 0 25px rgba(52, 211, 153, 0.4)",
               }}
               whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-full font-medium text-lg shadow-lg shadow-emerald-500/30 flex items-center gap-2"
+              className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-full font-medium text-lg shadow-lg shadow-emerald-500/30 flex justify-center items-center gap-2"
             >
               <span>Order Fresh Produce</span>
               <span>→</span>
