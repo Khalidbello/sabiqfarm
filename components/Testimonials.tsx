@@ -5,7 +5,7 @@ export const Testimonials = () => {
   const customerReviews = [
     {
       id: 1,
-      name: "Rebecca Isah",
+      name: "Rebecca Isah ",
       role: "Homemaker & Kitchen Gardener",
       review:
         "The organic eggs from your free-range hens taste completely different! My children actually finish their breakfast now. The yolks are so rich and golden - worth every rupee!",
