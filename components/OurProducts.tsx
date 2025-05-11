@@ -9,9 +9,9 @@ const products = [
     title: "Poultry",
     items: [
       { name: "Broilers", image: "/broiler.jpeg" },
-      { name: "Layers", image: "/broiler.jpeg" },
-      { name: "Eggs", image: "/broiler.jpeg" },
-      { name: "Processed Chicken", image: "/broiler.jpeg" },
+      { name: "Layers", image: "/layer.jpeg" },
+      { name: "Eggs", image: "/eggs.jpeg" },
+      { name: "Processed Chicken", image: "/processed_chicken.jpeg" },
     ],
     bgGradient: "bg-gradient-to-br from-amber-500/10 to-pink-500/10",
     glowColor: "shadow-amber-500/30",
@@ -113,23 +113,23 @@ const products2 = [
     title: "Poultry",
     items: [
       { name: "Broilers", image: "/broiler.jpeg" },
-      { name: "Layers", image: "/broiler.jpeg" },
-      { name: "Eggs", image: "/broiler.jpeg" },
-      { name: "Processed Chicken", image: "/broiler.jpeg" },
+      { name: "Layers", image: "/layer.jpeg" },
+      { name: "Eggs", image: "/eggs.jpeg" },
+      { name: "Processed Chicken", image: "/processed_chicken.jpeg" },
     ],
-    bgGradient: "bg-gradient-to-br from-emerald-900/20 to-green-900/30",
+    bgGradient: "bg-gradient-to-br from-amber-500/10 to-pink-500/10",
     glowColor: "shadow-emerald-500/40",
     accentColor: "bg-emerald-500",
   },
   {
     title: "Arable Crops",
     items: [
-      { name: "Maize", image: "/broiler.jpeg" },
-      { name: "Soybeans", image: "/broiler.jpeg" },
-      { name: "Cassava", image: "/broiler.jpeg" },
-      { name: "Vegetables", image: "/broiler.jpeg" },
+      { name: "Maize", image: "/maize.jpeg" },
+      { name: "Soybeans", image: "/soya_beans.jpeg" },
+      { name: "Cassava", image: "/cassava.jpeg" },
+      { name: "Vegetables", image: "/vegetables.jpeg" },
     ],
-    bgGradient: "bg-gradient-to-br from-green-900/20 to-emerald-900/30",
+    bgGradient: "bg-gradient-to-br from-green-500/10 to-emerald-500/10",
     glowColor: "shadow-green-500/40",
     accentColor: "bg-green-500",
   },
@@ -137,7 +137,7 @@ const products2 = [
 
 export const Products2 = () => {
   return (
-    <section id="products" className="py-16 md:py-24 bg-green-950">
+    <section id="products" className="py-16 md:py-24 bg-black">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -163,7 +163,7 @@ export const Products2 = () => {
               viewport={{ once: true }}
               className={`${product.bgGradient} rounded-2xl p-1 shadow-lg ${product.glowColor} hover:shadow-xl transition-all duration-300 border border-emerald-900/30`}
             >
-              <div className="bg-green-950/80 backdrop-blur-sm rounded-xl p-6 h-full">
+              <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl p-6 h-full">
                 <h3 className="text-xl md:text-2xl font-bold mb-6 text-white flex items-center">
                   <span
                     className={`w-3 h-3 rounded-full mr-2 ${product.accentColor}`}
@@ -209,4 +209,4 @@ export const Products2 = () => {
   );
 };
 
-export default Products;
+export default Products2;

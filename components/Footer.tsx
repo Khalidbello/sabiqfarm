@@ -163,7 +163,7 @@ const Footer = () => {
               whileTap={{ scale: 0.98 }}
               className="mt-6 px-6 py-2 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-full text-sm font-medium shadow-lg shadow-emerald-500/20"
             >
-              Get In Touch
+              <Link href="https://wa.me/08142269261">Get In Touch</Link>
             </motion.button>
           </motion.div>
         </div>

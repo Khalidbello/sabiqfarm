@@ -1,6 +1,6 @@
-import ProductFAQ from "@/components/faq";
+import ProductFAQ from "@/components/Faq";
 import Footer from "@/components/Footer";
-import { EmeraldHero } from "@/components/hero";
+import EmeraldHero from "@/components/Hero";
 import PremiumNavbar from "@/components/NavBar";
 import Products from "@/components/OurProducts";
 import FarmProcess from "@/components/Process";

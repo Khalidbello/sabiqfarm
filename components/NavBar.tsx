@@ -118,7 +118,7 @@ export default function PremiumNavbar() {
                 transition={{ delay: 0.1 }}
                 className="mt-4 w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-full font-medium shadow-lg shadow-emerald-500/20"
               >
-                Contact Us
+                <Link href="https://wa.me/08142269261">Contact Us</Link>
               </motion.button>
             </div>
           </motion.div>

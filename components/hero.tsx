@@ -1,156 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-
-export const NeonHero = () => {
-  return (
-    <section className="relative h-screen min-h-[600px] w-full overflow-hidden">
-      {/* Animated Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black z-0">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.6 }}
-          transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
-          className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay"
-        />
-      </div>
-
-      {/* Floating Particles (simplified) */}
-      {[...Array(15)].map((_, i) => (
-        <motion.div
-          key={i}
-          initial={{ y: 0, x: Math.random() * 100 - 50 }}
-          animate={{
-            y: [0, Math.random() * 100 - 50, 0],
-            x: [
-              Math.random() * 100 - 50,
-              Math.random() * 100 - 50,
-              Math.random() * 100 - 50,
-            ],
-          }}
-          transition={{
-            duration: 15 + Math.random() * 10,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className={`absolute rounded-full ${
-            i % 3 === 0
-              ? "bg-amber-400/30"
-              : i % 2 === 0
-              ? "bg-green-400/30"
-              : "bg-purple-400/30"
-          }`}
-          style={{
-            width: `${Math.random() * 10 + 2}px`,
-            height: `${Math.random() * 10 + 2}px`,
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
-          }}
-        />
-      ))}
-
-      {/* Hero Content - Perfectly Centered */}
-      <div className="container mx-auto h-full flex flex-col justify-center items-center px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center max-w-4xl"
-        >
-          {/* Main Heading with Gradient Glow */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-green-300 to-emerald-400">
-              Musabiq Farms
-            </span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="block text-white mt-2 text-xl sm:text-2xl md:text-3xl font-light"
-            >
-              Where{" "}
-              <span className="font-medium text-amber-300">
-                Premium Poultry
-              </span>{" "}
-              Meets{" "}
-              <span className="font-medium text-green-300">Organic Crops</span>
-            </motion.span>
-          </h1>
-
-          {/* Subheading with animated border */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto relative py-4"
-          >
-            <motion.span
-              initial={{ width: 0 }}
-              animate={{ width: "100%" }}
-              transition={{ delay: 0.8, duration: 1.5 }}
-              className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-amber-400/0 via-green-400 to-emerald-400/0"
-            />
-            Farm-fresh excellence delivered to your doorstep. Certified organic,
-            sustainably grown.
-            <motion.span
-              initial={{ width: 0 }}
-              animate={{ width: "100%" }}
-              transition={{ delay: 0.8, duration: 1.5 }}
-              className="absolute top-0 right-0 h-0.5 bg-gradient-to-l from-amber-400/0 via-green-400 to-emerald-400/0"
-            />
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            className="flex flex-col sm:flex-row justify-center gap-4 mt-8"
-          >
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 20px rgba(74, 222, 128, 0.5)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-full font-medium text-sm sm:text-base shadow-lg shadow-green-500/30"
-            >
-              Order Now
-            </motion.button>
-
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 20px rgba(251, 191, 36, 0.5)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-transparent border-2 border-amber-400 text-amber-400 rounded-full font-medium text-sm sm:text-base shadow-lg shadow-amber-500/20"
-            >
-              Farm Tour
-            </motion.button>
-          </motion.div>
-        </motion.div>
-
-        {/* Animated Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <div className="animate-bounce w-6 h-10 border-4 border-emerald-400/50 rounded-full flex justify-center">
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-1 h-2 bg-emerald-400 rounded-full mt-2"
-            />
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
+import Link from "next/link";
 
 export const EmeraldHero = () => {
   return (
@@ -253,8 +104,10 @@ export const EmeraldHero = () => {
               whileTap={{ scale: 0.98 }}
               className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-full font-medium text-lg shadow-lg shadow-emerald-500/30 flex justify-center items-center gap-2"
             >
-              <span>Order Fresh Produce</span>
-              <span>→</span>
+              <Link href="https://wa.me/08142269261">
+                <span>Order Fresh Produce</span>
+                <span>→</span>
+              </Link>
             </motion.button>
 
             <motion.button
@@ -288,3 +141,5 @@ export const EmeraldHero = () => {
     </section>
   );
 };
+
+export default EmeraldHero;
